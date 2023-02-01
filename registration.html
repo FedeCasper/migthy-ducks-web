@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Nunito+Sans:wght@200;400&family=Nunito:wght@200;400&family=Carter+One&family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/mdhl_1.css">
+        <link rel="icon" href="./assets/duck_icon.png">
+        <title>Registration Form</title>
+    </head>
+    <body>
+    
+        <!-- ENCABEZADO -->
+        <header>
+            <div id="stripe2"></div>
+            <div id="mark">
+                <h1>MIGTHY DUCKS HOCKEY LEAGUE</h1>
+                <img src="./assets/logoMightyDucks-01.png" alt="Logo Migthy Ducks" id="logo">
+            </div>
+            <h2 id="stripe">Registration Form</h2>
+        </header>
+    
+        <!-- CONTENIDO PRINCIPAL -->
+        <main>
+    
+        <!-- BARRA DE NAVEGACION -->
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="game_info.html">Schedule</a>
+                <a href="rules.html">Rules</a>
+                <a href="#" class="push" id="reg-button"><p>Registration</p><p>Form</p></a>
+                <a href="contact.html">Contact</a>
+            </nav>
+    
+        <!-- CONTENEDOR DERECHO -->
+            <section class="r-cont">
+                <h2>Sign up for the ducks!</h2>
+                <form action="show_data.html" id="reg-form" method="get">
+                    <!-- 1° ROW FORM - NAME & LAST NAME-->
+                    <fieldset class="sub-data" id="row_1">
+                        <legend> Registration Form</legend>
+                        <label for="fname">
+                            <span class="key">First Name</span>
+                            <input type="text" id="fname" name="first_name" placeholder="your name" required>
+                        </label>
+                        <label for="lname">
+                            <span class="sub-key">Last Name:</span>
+                            <input type="text" id="lname" name="last_name" placeholder="last name" required>
+                        </label>
+                    </fieldset>
+                    <!-- 2° ROW FORM - ADDRESS-->
+                    <fieldset class="sub-data">
+                        <label for="streetadd">
+                            <span class="key">Street Address</span>
+                            <input type="text" id="streetadd" name="street_address" placeholder="(ex street /number)" required>
+                        </label>
+                    </fieldset>
+                    <!-- 3° ROW FORM - CITY & ZIP CODE-->
+                    <fieldset class="sub-data" id="row_3">
+                        <label for="city">
+                            <span class="key">City</span>
+                            <input type="text" id="city" name="city" placeholder="actual residence" required>
+                        </label>
+                        <label for="zipcode">
+                            <span class="sub-key">Zip Code</span>
+                            <input type="text" id="zipcode" name="zip_code" placeholder="zip code number" required>
+                        </label>
+                    </fieldset>
+                    <!-- 4° ROW FORM - PERSONAL DATA-->
+                    <fieldset>
+                        <label for="birthday">
+                            <span class="key">Birthday</span>
+                            <input type="date" id="birthday" name="birthday">
+                        </label>
+                        <label for="parent">
+                            <span class="sub-key">Parent / Guardian</span>
+                            <input type="text" id="parent" name="parent_guardian" placeholder="person in charge" required>
+                        </label>
+                    </fieldset>
+                    <!-- 5° ROW FORM - GENDER-->
+                    <fieldset id="row_5">
+                        <span class="key">Gender</span>
+                        <input type="radio" id="gender-female" name="gender" value="female">
+                        <label for="gender-female" class="gender-label">Female</label>
+                        <input type="radio" id="gender-male" name="gender" value="male">
+                        <label for="gender-male" class="gender-label">Male</label>
+                    </fieldset>
+                    <!-- 6° ROW FORM - GRADE-->
+                    <fieldset id="row_6">
+                        <span class="key">Grade</span>
+                            <input type="radio" id="pre" name="grade" value="pre_school">
+                            <label for="pre" id="grade-pre">Pre-School</label>
+                            <input type="radio" id="first-grade" name="grade" value="1st">
+                            <label for="first-grade" class="grade-label">1st</label>
+                            <input type="radio" id="second-grade" name="grade" value="2nd">
+                            <label for="second-grade" class="grade-label">2nd</label>
+                            <input type="radio" id="third-grade" name="grade" value="3rd">
+                            <label for="third-grade" class="grade-label">3rd</label>
+                            <input type="radio" id="fourth-grade" name="grade" value="4th">
+                            <label for="fourth-grade" class="grade-label">4th</label>
+                            <input type="radio" id="fifth-grade" name="grade" value="5th">
+                            <label for="fifth-grade" class="grade-label">5th</label>
+                    </fieldset>
+                    <!-- 7° ROW FORM - PROXIMITY-->
+                    <fieldset id="row_7">
+                        <legend>Which elementary school do you live near?</legend>
+                        <label for="nearschool">
+                            <span class="key">Closest School</span>
+                            <select name="near_school" id="nearschool">
+                                <option value="AJ Katzenmaier">AJ Katzenmaier</option>
+                                <option value="Greenbay">Greenbay</option>
+                                <option value="Howar">Howard A. Yeager</option>
+                                <option value="Marjorie P. Hart">Marjorie P. Hart</option>  
+                                <option value="North">Nort Elementary</option>  
+                                <option value="South">South Elementary</option>  
+                            </select>
+                        </label>
+                    </fieldset>
+                    <!-- 8° ROW FORM - POSITION IN THE GAME-->
+                    <fieldset id="row_8">
+                        <span>What position(s) do you normally play?</span>
+                        <fieldset class="row_8-align">
+                            <input type="checkbox" id="goalkeeper" name="goalkeeper" value="goalkeeper">
+                            <label for="goalkeeper" class="row_8-label">Goalkeeper</label>
+                            <input type="checkbox" id="defense" name="role" value="defense">
+                            <label for="defense" class="row_8-label">Defense</label>
+                        </fieldset>
+                        <fieldset class="row_8-align">
+                            <input type="checkbox" id="midfield" name="role" value="midfield">
+                            <label for="midfield" class="row_8-label">Midfield</label>
+                            <input type="checkbox" id="foward" name="role" value="foward">
+                            <label for="foward" class="row_8-label">Foward</label>
+                        </fieldset>
+                    </fieldset>
+                    <!-- 9° ROW FORM - UNIFORM SIZE-->
+                    <fieldset id="row_9">
+                        <span>Uniform Size</span>
+                        <fieldset class="row_9-align">
+                            <input type="radio" id="ys" name="size" value="YS" checked>
+                            <label for="ys" class="row_9-label">Youth Small</label>
+                            <input type="radio" id="s" name="size" value="S">
+                            <label for="s" class="row_9-label">Small</label>
+                            <input type="radio" id="xl" name="size" value="XL">
+                            <label for="xl" class="row_9-label">Extra Large</label>
+                        </fieldset>
+                        <fieldset class="row_9-align">
+                            <input type="radio" id="ym" name="size" value="YM">
+                            <label for="ym" class="row_9-label">Youth Medium</label>
+                            <input type="radio" id="m" name="size" value="M">
+                            <label for="m" class="row_9-label">Medium</label>
+                        </fieldset>
+                        <fieldset class="row_9-align">
+                            <input type="radio" id="l" name="size" value="L">
+                            <label for="l" class="row_9-label">Large</label>
+                            <input type="radio" id="yl" name="size" value="YL">
+                            <label for="yl" class="row_9-label">Youth Large</label>
+                        </fieldset>
+                    </fieldset>
+                        <!-- 10° ROW FORM - SIGNATURE-->
+                    <fieldset id="row_10">
+                        <legend>Permission to Play</legend>
+                        <p>I, the parent or guardian of the minor registrant, agree that the registrant and i will abide by all the rules of the Migthy Ducks Hockey League (MDHL). In reconizing the posibility of physical injury associated with hockey and in consideration for the "League" accepting the registrant for its hockey programs and activities, I hereby release, discharge, and/or otherwise idemnify MDHL, practices and games, against any claim by or on behalf of the registrant as a result of the activities, which transportation.
+                        By entering my name below, I hereby agree and authorizethe above. In addition, by singing below, also acknowledge that I have read the cancellation policy and agree to its terms.</p>
+                        <label for="sign" class="row_10-margin">Parent/Guardian signature:
+                            <input type="text" id="sign" name="sign">
+                        </label>
+                        <label for="date-sign" class="row_10-margin">Date:
+                            <input type="date" id="date-sign" name="date-sign">
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="submit" value="Enviar datos" id="send-button">
+                    </fieldset> 
+                </form>
+            </section>
+        </main>
+        <!-- PIE DE PAGINA -->
+        <footer>
+            <p id="firma">Design by Federico Rouyere® | 2022</p>
+        </footer>
+
+</body>
+</html>
